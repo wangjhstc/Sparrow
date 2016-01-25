@@ -1,0 +1,29 @@
+//
+//  sparrow.pch
+//  sparrow
+//
+//  Created by microsparrow on 16/1/25.
+//  Copyright © 2016年 xkeshi. All rights reserved.
+//
+
+#ifndef sparrow_pch
+#define sparrow_pch
+
+#import <Foundation/Foundation.h>
+
+#if DEPLOYMENT==1
+
+static NSString *apiHost    =   @"http://www.baidu.com";
+
+#elif DEPLOYMENT==2
+
+static NSString *apiHost    =   @"http://www.tencent.com";
+
+#elif DEPLOYMENT==3
+
+static NSString *apiHost    =   @"http://www.taobao.com";
+
+#endif
+
+
+#endif /* sparrow_pch */

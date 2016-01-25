@@ -51,6 +51,7 @@
 		8A8A13061C561D53004E9DA3 /* sparrowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sparrowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8A130A1C561D53004E9DA3 /* sparrowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sparrowUITests.m; sourceTree = "<group>"; };
 		8A8A130C1C561D53004E9DA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A8A131D1C56270F004E9DA3 /* sparrow.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sparrow.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +102,7 @@
 		8A8A12E41C561D53004E9DA3 /* sparrow */ = {
 			isa = PBXGroup;
 			children = (
+				8A8A13331C562AB5004E9DA3 /* ModelView */,
 				8A8A12E81C561D53004E9DA3 /* AppDelegate.h */,
 				8A8A12E91C561D53004E9DA3 /* AppDelegate.m */,
 				8A8A12EB1C561D53004E9DA3 /* ViewController.h */,
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				8A8A12E61C561D53004E9DA3 /* main.m */,
+				8A8A131D1C56270F004E9DA3 /* sparrow.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +141,13 @@
 				8A8A130C1C561D53004E9DA3 /* Info.plist */,
 			);
 			path = sparrowUITests;
+			sourceTree = "<group>";
+		};
+		8A8A13331C562AB5004E9DA3 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,7 +373,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -401,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -413,6 +423,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = sparrow/sparrow.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEPLOYMENT=1",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = sparrow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xkeshi.sparrow;
@@ -424,6 +439,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = sparrow/sparrow.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEPLOYMENT=3";
 				INFOPLIST_FILE = sparrow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xkeshi.sparrow;
@@ -479,6 +496,90 @@
 			};
 			name = Release;
 		};
+		8A8A13181C561F14004E9DA3 /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Beta;
+		};
+		8A8A13191C561F14004E9DA3 /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = sparrow/sparrow.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEPLOYMENT=2",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = sparrow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xkeshi.sparrow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Beta;
+		};
+		8A8A131A1C561F14004E9DA3 /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = sparrowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xkeshi.sparrowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sparrow.app/sparrow";
+			};
+			name = Beta;
+		};
+		8A8A131B1C561F14004E9DA3 /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = sparrowUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xkeshi.sparrowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = sparrow;
+				USES_XCTRUNNER = YES;
+			};
+			name = Beta;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -486,6 +587,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A8A130D1C561D53004E9DA3 /* Debug */,
+				8A8A13181C561F14004E9DA3 /* Beta */,
 				8A8A130E1C561D53004E9DA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -495,6 +597,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A8A13101C561D53004E9DA3 /* Debug */,
+				8A8A13191C561F14004E9DA3 /* Beta */,
 				8A8A13111C561D53004E9DA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -503,6 +606,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A8A13131C561D53004E9DA3 /* Debug */,
+				8A8A131A1C561F14004E9DA3 /* Beta */,
 				8A8A13141C561D53004E9DA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -511,6 +615,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A8A13161C561D53004E9DA3 /* Debug */,
+				8A8A131B1C561F14004E9DA3 /* Beta */,
 				8A8A13171C561D53004E9DA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
