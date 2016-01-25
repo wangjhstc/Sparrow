@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "inheritView.h"
 
 @interface ViewController ()
 
@@ -18,7 +19,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    NSLog(@"%@",apiHost);
+//    awakeNibView *anibView = [[awakeNibView alloc] init];
+////    anibView.frame = (CGRect){0,0,200,120};
+//    anibView.backgroundColor = [UIColor yellowColor];
+//    
+//    [self.view addSubview:anibView];
+    
+    
+    inheritView *inher = [[inheritView alloc] init];
+    inher.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:inher];
 }
 
 - (void)didReceiveMemoryWarning {

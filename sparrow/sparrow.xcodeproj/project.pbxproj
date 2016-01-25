@@ -15,6 +15,9 @@
 		8A8A12F51C561D53004E9DA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8A12F31C561D53004E9DA3 /* LaunchScreen.storyboard */; };
 		8A8A13001C561D53004E9DA3 /* sparrowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A12FF1C561D53004E9DA3 /* sparrowTests.m */; };
 		8A8A130B1C561D53004E9DA3 /* sparrowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A130A1C561D53004E9DA3 /* sparrowUITests.m */; };
+		8AFAFF381C5680DF0024E0EB /* awakeNibView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAFF371C5680DF0024E0EB /* awakeNibView.m */; };
+		8AFAFF3A1C5682130024E0EB /* awakeNibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAFF391C5682130024E0EB /* awakeNibView.xib */; };
+		8AFAFF3D1C5684DA0024E0EB /* inheritView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAFF3C1C5684DA0024E0EB /* inheritView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,11 @@
 		8A8A130A1C561D53004E9DA3 /* sparrowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sparrowUITests.m; sourceTree = "<group>"; };
 		8A8A130C1C561D53004E9DA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A8A131D1C56270F004E9DA3 /* sparrow.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sparrow.pch; sourceTree = "<group>"; };
+		8AFAFF361C5680DF0024E0EB /* awakeNibView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = awakeNibView.h; sourceTree = "<group>"; };
+		8AFAFF371C5680DF0024E0EB /* awakeNibView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = awakeNibView.m; sourceTree = "<group>"; };
+		8AFAFF391C5682130024E0EB /* awakeNibView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = awakeNibView.xib; sourceTree = "<group>"; };
+		8AFAFF3B1C5684DA0024E0EB /* inheritView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = inheritView.h; sourceTree = "<group>"; };
+		8AFAFF3C1C5684DA0024E0EB /* inheritView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = inheritView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +154,11 @@
 		8A8A13331C562AB5004E9DA3 /* ModelView */ = {
 			isa = PBXGroup;
 			children = (
+				8AFAFF361C5680DF0024E0EB /* awakeNibView.h */,
+				8AFAFF371C5680DF0024E0EB /* awakeNibView.m */,
+				8AFAFF391C5682130024E0EB /* awakeNibView.xib */,
+				8AFAFF3B1C5684DA0024E0EB /* inheritView.h */,
+				8AFAFF3C1C5684DA0024E0EB /* inheritView.m */,
 			);
 			path = ModelView;
 			sourceTree = "<group>";
@@ -255,6 +268,7 @@
 			files = (
 				8A8A12F51C561D53004E9DA3 /* LaunchScreen.storyboard in Resources */,
 				8A8A12F21C561D53004E9DA3 /* Assets.xcassets in Resources */,
+				8AFAFF3A1C5682130024E0EB /* awakeNibView.xib in Resources */,
 				8A8A12F01C561D53004E9DA3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +296,8 @@
 			files = (
 				8A8A12ED1C561D53004E9DA3 /* ViewController.m in Sources */,
 				8A8A12EA1C561D53004E9DA3 /* AppDelegate.m in Sources */,
+				8AFAFF3D1C5684DA0024E0EB /* inheritView.m in Sources */,
+				8AFAFF381C5680DF0024E0EB /* awakeNibView.m in Sources */,
 				8A8A12E71C561D53004E9DA3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,6 +617,7 @@
 				8A8A13111C561D53004E9DA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A8A13121C561D53004E9DA3 /* Build configuration list for PBXNativeTarget "sparrowTests" */ = {
 			isa = XCConfigurationList;
@@ -610,6 +627,7 @@
 				8A8A13141C561D53004E9DA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A8A13151C561D53004E9DA3 /* Build configuration list for PBXNativeTarget "sparrowUITests" */ = {
 			isa = XCConfigurationList;
@@ -619,6 +637,7 @@
 				8A8A13171C561D53004E9DA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
