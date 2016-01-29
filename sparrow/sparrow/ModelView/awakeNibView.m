@@ -14,8 +14,9 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        CGRect rect = [UIScreen mainScreen].bounds;
+        self.backgroundColor = [UIColor yellowColor];
         
+        CGRect rect = [UIScreen mainScreen].bounds;
         self.frame = (CGRect){0,0,CGRectGetWidth(rect),120};
     }
 
@@ -27,14 +28,12 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    self.backgroundColor = [UIColor redColor];
-    
     NSLog(@"%s",__FUNCTION__);
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
-        self.backgroundColor = [UIColor grayColor];
+        
     }
     
     NSLog(@"%s",__FUNCTION__);
@@ -42,14 +41,20 @@
     return self;
 }
 
-
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
-    // Drawing code
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetLineWidth(context, 200);
+    CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
+    CGContextStrokeRect(context, CGRectMake(110.0, 110.0, 100, 100));
+    CGContextStrokePath(context);
 }
-*/
+
+- (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx {
+    
+}
+
+- (void)drawRect:(CGRect)rect forViewPrintFormatter:(UIViewPrintFormatter *)formatter {
+    
+}
 
 @end

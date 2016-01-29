@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +15,22 @@
 
 @implementation AppDelegate
 
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions {
+    NSLog(@"%s",__FUNCTION__);
+    
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        LoginViewController *loginVC = [[LoginViewController alloc] init];
+//        [self.window addSubview:loginVC.view];
+////        [application.sharedApplication.roo presentViewController:loginVC animated:YES completion:nil];
+//    });
+//    
+    return YES;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    NSLog(@"%s",__FUNCTION__);
+    
     return YES;
 }
 

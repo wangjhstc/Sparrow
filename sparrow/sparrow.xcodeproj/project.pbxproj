@@ -15,9 +15,15 @@
 		8A8A12F51C561D53004E9DA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8A12F31C561D53004E9DA3 /* LaunchScreen.storyboard */; };
 		8A8A13001C561D53004E9DA3 /* sparrowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A12FF1C561D53004E9DA3 /* sparrowTests.m */; };
 		8A8A130B1C561D53004E9DA3 /* sparrowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A130A1C561D53004E9DA3 /* sparrowUITests.m */; };
+		8AE56EFB1C57CC7200F07001 /* LineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56EFA1C57CC7200F07001 /* LineView.m */; };
+		8AE56EFF1C58661200F07001 /* BezierPathVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56EFE1C58661200F07001 /* BezierPathVC.m */; };
+		8AE56F021C586B1000F07001 /* BezierPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56F011C586B1000F07001 /* BezierPathView.m */; };
+		8AE56F061C58B02700F07001 /* myLineChat.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56F051C58B02700F07001 /* myLineChat.m */; };
+		8AE56F0C1C58E58800F07001 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56F0B1C58E58800F07001 /* LoginViewController.m */; };
 		8AFAFF381C5680DF0024E0EB /* awakeNibView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAFF371C5680DF0024E0EB /* awakeNibView.m */; };
 		8AFAFF3A1C5682130024E0EB /* awakeNibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAFF391C5682130024E0EB /* awakeNibView.xib */; };
 		8AFAFF3D1C5684DA0024E0EB /* inheritView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAFF3C1C5684DA0024E0EB /* inheritView.m */; };
+		8AFAFF411C5775B70024E0EB /* RectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFAFF401C5775B70024E0EB /* RectView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,11 +61,23 @@
 		8A8A130A1C561D53004E9DA3 /* sparrowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sparrowUITests.m; sourceTree = "<group>"; };
 		8A8A130C1C561D53004E9DA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A8A131D1C56270F004E9DA3 /* sparrow.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sparrow.pch; sourceTree = "<group>"; };
+		8AE56EF91C57CC7200F07001 /* LineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineView.h; sourceTree = "<group>"; };
+		8AE56EFA1C57CC7200F07001 /* LineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineView.m; sourceTree = "<group>"; };
+		8AE56EFD1C58661200F07001 /* BezierPathVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierPathVC.h; sourceTree = "<group>"; };
+		8AE56EFE1C58661200F07001 /* BezierPathVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierPathVC.m; sourceTree = "<group>"; };
+		8AE56F001C586B1000F07001 /* BezierPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierPathView.h; sourceTree = "<group>"; };
+		8AE56F011C586B1000F07001 /* BezierPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierPathView.m; sourceTree = "<group>"; };
+		8AE56F041C58B02700F07001 /* myLineChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myLineChat.h; sourceTree = "<group>"; };
+		8AE56F051C58B02700F07001 /* myLineChat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myLineChat.m; sourceTree = "<group>"; };
+		8AE56F0A1C58E58800F07001 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		8AE56F0B1C58E58800F07001 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		8AFAFF361C5680DF0024E0EB /* awakeNibView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = awakeNibView.h; sourceTree = "<group>"; };
 		8AFAFF371C5680DF0024E0EB /* awakeNibView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = awakeNibView.m; sourceTree = "<group>"; };
 		8AFAFF391C5682130024E0EB /* awakeNibView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = awakeNibView.xib; sourceTree = "<group>"; };
 		8AFAFF3B1C5684DA0024E0EB /* inheritView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = inheritView.h; sourceTree = "<group>"; };
 		8AFAFF3C1C5684DA0024E0EB /* inheritView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = inheritView.m; sourceTree = "<group>"; };
+		8AFAFF3F1C5775B70024E0EB /* RectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectView.h; sourceTree = "<group>"; };
+		8AFAFF401C5775B70024E0EB /* RectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RectView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +128,10 @@
 		8A8A12E41C561D53004E9DA3 /* sparrow */ = {
 			isa = PBXGroup;
 			children = (
+				8AE56F091C58E57400F07001 /* Main */,
+				8AE56F031C58B02700F07001 /* MyLineView */,
+				8AE56EFC1C5865F800F07001 /* Controller */,
+				8AE56EF81C57CC6300F07001 /* LineView */,
 				8A8A13331C562AB5004E9DA3 /* ModelView */,
 				8A8A12E81C561D53004E9DA3 /* AppDelegate.h */,
 				8A8A12E91C561D53004E9DA3 /* AppDelegate.m */,
@@ -159,8 +181,48 @@
 				8AFAFF391C5682130024E0EB /* awakeNibView.xib */,
 				8AFAFF3B1C5684DA0024E0EB /* inheritView.h */,
 				8AFAFF3C1C5684DA0024E0EB /* inheritView.m */,
+				8AFAFF3F1C5775B70024E0EB /* RectView.h */,
+				8AFAFF401C5775B70024E0EB /* RectView.m */,
+				8AE56F001C586B1000F07001 /* BezierPathView.h */,
+				8AE56F011C586B1000F07001 /* BezierPathView.m */,
 			);
 			path = ModelView;
+			sourceTree = "<group>";
+		};
+		8AE56EF81C57CC6300F07001 /* LineView */ = {
+			isa = PBXGroup;
+			children = (
+				8AE56EF91C57CC7200F07001 /* LineView.h */,
+				8AE56EFA1C57CC7200F07001 /* LineView.m */,
+			);
+			path = LineView;
+			sourceTree = "<group>";
+		};
+		8AE56EFC1C5865F800F07001 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8AE56EFD1C58661200F07001 /* BezierPathVC.h */,
+				8AE56EFE1C58661200F07001 /* BezierPathVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8AE56F031C58B02700F07001 /* MyLineView */ = {
+			isa = PBXGroup;
+			children = (
+				8AE56F041C58B02700F07001 /* myLineChat.h */,
+				8AE56F051C58B02700F07001 /* myLineChat.m */,
+			);
+			path = MyLineView;
+			sourceTree = "<group>";
+		};
+		8AE56F091C58E57400F07001 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8AE56F0A1C58E58800F07001 /* LoginViewController.h */,
+				8AE56F0B1C58E58800F07001 /* LoginViewController.m */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,11 +373,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AE56EFF1C58661200F07001 /* BezierPathVC.m in Sources */,
+				8AFAFF411C5775B70024E0EB /* RectView.m in Sources */,
 				8A8A12ED1C561D53004E9DA3 /* ViewController.m in Sources */,
+				8AE56EFB1C57CC7200F07001 /* LineView.m in Sources */,
 				8A8A12EA1C561D53004E9DA3 /* AppDelegate.m in Sources */,
 				8AFAFF3D1C5684DA0024E0EB /* inheritView.m in Sources */,
 				8AFAFF381C5680DF0024E0EB /* awakeNibView.m in Sources */,
+				8AE56F021C586B1000F07001 /* BezierPathView.m in Sources */,
 				8A8A12E71C561D53004E9DA3 /* main.m in Sources */,
+				8AE56F0C1C58E58800F07001 /* LoginViewController.m in Sources */,
+				8AE56F061C58B02700F07001 /* myLineChat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
