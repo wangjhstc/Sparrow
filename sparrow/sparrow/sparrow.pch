@@ -9,6 +9,8 @@
 #ifndef sparrow_pch
 #define sparrow_pch
 
+#define angle2Radian(x) ((x)/180.0 * M_PI)
+
 #import <Foundation/Foundation.h>
 
 #if DEPLOYMENT==1

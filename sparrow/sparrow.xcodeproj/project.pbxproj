@@ -364,7 +364,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "find \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" \\) -print0 | xargs -0 wc -l | awk '$1 > 200 && $2 != \"total\" { print $2 \":1: warning: file more than 200 lines\" }'";
+			shellScript = "find \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" \\) -print0 | xargs -0 wc -l | awk '$1 > 500 && $2 != \"total\" { print $2 \":1: warning: file more than 500 lines\" }'";
 		};
 /* End PBXShellScriptBuildPhase section */
 

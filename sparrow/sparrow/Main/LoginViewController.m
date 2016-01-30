@@ -7,7 +7,6 @@
 //
 
 #import "LoginViewController.h"
-#define angle2Radian(x) ((x)/180.0 * M_PI)
 
 @interface LoginViewController () <UIGestureRecognizerDelegate> {
     UITapGestureRecognizer  *tapPress;
@@ -52,6 +51,7 @@
 - (void)visualUserIco {
     _userIco = [[UIImageView alloc] initWithFrame:(CGRect){150,180,100,100}];
     _userIco.image = [UIImage imageNamed:@"userIco"];
+//    _userIco.image = [UIImage imageWithContentsOfFile:@"userIco.png"];
     _userIco.userInteractionEnabled = YES;
     _userIco.layer.masksToBounds= YES;
     _userIco.layer.cornerRadius = 6.0f;
@@ -129,7 +129,6 @@
 }
 
 - (void)touchLogin:(UIButton *)sender {
-    
     if([_txtUserName.text isEqualToString:@"wangjhstc"]) {
         [self animationGroup];
     }
@@ -147,7 +146,6 @@
     [super didReceiveMemoryWarning];
 }
 
-
 - (void)wiggleControl:(UIView *)view {
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
     animation.keyPath = @"position.x";
@@ -164,7 +162,6 @@
 }
 
 - (void)textFieldChanged {
-    
     if (_txtUserName.text.length > 20) {
         _txtUserName.text = [_txtUserName.text substringToIndex:20];
     }
@@ -207,23 +204,15 @@
 
     CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
     
-//    animationGroup.animations = @[rotate,translate,scale];
     animationGroup.animations = @[scale,translateX,translateY];
-    
     animationGroup.removedOnCompletion = NO;
     animationGroup.fillMode = kCAFillModeForwards;
     
     [_userIco.layer addAnimation:animationGroup forKey:nil];
-
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-//    PbLeafViewController *leafViewController = [anim valueForKey:@"leaf"];
-//    if (flag && leafViewController) {
-//        CGPoint currentRect = [[leafViewController.view.layer presentationLayer]position];
-//        leafViewController.view.layer.position = currentRect;
-//        return;
-//    }
+    
 }
 
 @end
