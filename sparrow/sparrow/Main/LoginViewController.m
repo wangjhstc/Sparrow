@@ -8,6 +8,20 @@
 
 #import "LoginViewController.h"
 
+@interface LoginModel : NSObject
+
+@property   (nonatomic,strong)  NSString    *name;
+
+@property   (nonatomic,strong)  NSString    *password;
+
+@end
+
+@implementation LoginModel
+
+
+@end
+
+
 @interface LoginViewController () <UIGestureRecognizerDelegate> {
     UITapGestureRecognizer  *tapPress;
 }
@@ -129,18 +143,69 @@
 }
 
 - (void)touchLogin:(UIButton *)sender {
-    if([_txtUserName.text isEqualToString:@"wangjhstc"]) {
-        [self animationGroup];
-    }
-    else {
-        [self wiggleControl:_txtUserName];
+    
+//    if([_txtUserName.text isEqualToString:@"wangjhstc"]) {
+//        [self animationGroup];
+//    }
+//    else {
+//        [self wiggleControl:_txtUserName];
+//        
+//        [_txtUserName setText:@""];
+//        [_txtUserName setValue:[UIColor yellowColor] forKeyPath:@"_placeholderLabel.textColor"];
+//        _btnLogin.enabled = NO;
+//    //    [_txtUserName setValue:[UIFont boldSystemFontOfSize:16] forKeyPath:@"_placeholderLabel.font"];//限定字号
+//    }
+    
+    
+    __weak typeof(self) weakself = self;
+    
+
+    dispatch_barrier_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSLog(@"--1");
+        [weakself testInvocation:-1];
+    });
+    
+    dispatch_barrier_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSLog(@"--2");
+        [weakself testInvocation:-2];
+    });
+    
+    dispatch_barrier_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSLog(@"--3");
+        [weakself testInvocation:-3];
+    });
+    
+    
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [weakself testInvocation:1];
+//    });
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [weakself testInvocation:2];
+//    });
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [weakself testInvocation:3];
+//    });
+    
+}
+
+- (void)testInvocation:(NSInteger)tagParam {
+    
+    for (NSInteger index = 0; index < 1000; index ++) {
         
-        [_txtUserName setText:@""];
-        [_txtUserName setValue:[UIColor yellowColor] forKeyPath:@"_placeholderLabel.textColor"];
-        _btnLogin.enabled = NO;
-    //    [_txtUserName setValue:[UIFont boldSystemFontOfSize:16] forKeyPath:@"_placeholderLabel.font"];//限定字号
+        
+        @synchronized([[NSString alloc] init]) {
+            
+        }
+        
+        NSLog(@"%zi___%zi",tagParam,index);
+//        NSMutableArray *array = [[NSMutableArray alloc] init];
+//        LoginModel *loginModel = [[LoginModel alloc] init];
+//        [array addObject:loginModel];
     }
 }
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -184,7 +249,8 @@
 //    scale.keyPath = @"transform.scale";
 //    scale.toValue = @0.5f;
 
-    [_userIco removeGestureRecognizer:tapPress];
+    
+//    [_userIco removeGestureRecognizer:tapPress];
     
     CABasicAnimation *scale = [CABasicAnimation animation];
     scale.keyPath = @"transform.scale";
