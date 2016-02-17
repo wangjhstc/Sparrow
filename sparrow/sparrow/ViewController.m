@@ -15,6 +15,7 @@
 #import "myLineChat.h"
 #import "LoginViewController.h"
 
+
 @interface ViewController ()
 
 @end
@@ -70,7 +71,6 @@
 //    view.frame = (CGRect){100,100,200,80};
 //    [self.view addSubview:view];
     
-//    6214 8357 1127 9461
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setTitle:@"wangjhstc" forState:UIControlStateNormal];
