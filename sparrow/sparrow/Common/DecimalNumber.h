@@ -10,6 +10,8 @@
 
 @interface DecimalNumber : NSObject
 
+
+
 - (NSDecimalNumber *)mantissa;
 
 - (NSDecimalNumber *)add;

@@ -7,6 +7,8 @@
 //
 
 #import "LoginViewController.h"
+#import "LoadDataHelper.h"
+
 
 @interface LoginModel : NSObject
 
@@ -155,6 +157,7 @@
 //        _btnLogin.enabled = NO;
 //    //    [_txtUserName setValue:[UIFont boldSystemFontOfSize:16] forKeyPath:@"_placeholderLabel.font"];//限定字号
 //    }
+    
     
     
     __weak typeof(self) weakself = self;

@@ -20,6 +20,34 @@
                ReferencedContainer = "container:sparrow.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8A8A12FA1C561D53004E9DA3"
+               BuildableName = "sparrowTests.xctest"
+               BlueprintName = "sparrowTests"
+               ReferencedContainer = "container:sparrow.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8A8A13051C561D53004E9DA3"
+               BuildableName = "sparrowUITests.xctest"
+               BlueprintName = "sparrowUITests"
+               ReferencedContainer = "container:sparrow.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -35,16 +63,6 @@
                BlueprintIdentifier = "8A8A12FA1C561D53004E9DA3"
                BuildableName = "sparrowTests.xctest"
                BlueprintName = "sparrowTests"
-               ReferencedContainer = "container:sparrow.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8A8A13051C561D53004E9DA3"
-               BuildableName = "sparrowUITests.xctest"
-               BlueprintName = "sparrowUITests"
                ReferencedContainer = "container:sparrow.xcodeproj">
             </BuildableReference>
          </TestableReference>

@@ -22,6 +22,10 @@
 		8AD4748F1C71B152007D61FB /* DecimalNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD4748E1C71B152007D61FB /* DecimalNumberTests.m */; };
 		8AD474921C71C4F2007D61FB /* DecimalNumberHander.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD474911C71C4F2007D61FB /* DecimalNumberHander.m */; };
 		8AD474941C71C841007D61FB /* DecimalNumberHanderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD474931C71C841007D61FB /* DecimalNumberHanderTests.m */; };
+		8AD474981C759C7D007D61FB /* NSDictionary+Unicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD474971C759C7D007D61FB /* NSDictionary+Unicode.m */; };
+		8AD4749C1C75AE58007D61FB /* LoadDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD4749B1C75AE57007D61FB /* LoadDataHelper.m */; };
+		8AD4749F1C75AE6F007D61FB /* LoadDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD4749E1C75AE6F007D61FB /* LoadDataModel.m */; };
+		8AD474A11C75B337007D61FB /* LoadDataHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD474A01C75B337007D61FB /* LoadDataHelperTests.m */; };
 		8AE56EFB1C57CC7200F07001 /* LineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56EFA1C57CC7200F07001 /* LineView.m */; };
 		8AE56EFF1C58661200F07001 /* BezierPathVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56EFE1C58661200F07001 /* BezierPathVC.m */; };
 		8AE56F021C586B1000F07001 /* BezierPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56F011C586B1000F07001 /* BezierPathView.m */; };
@@ -80,6 +84,13 @@
 		8AD474901C71C4F2007D61FB /* DecimalNumberHander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecimalNumberHander.h; sourceTree = "<group>"; };
 		8AD474911C71C4F2007D61FB /* DecimalNumberHander.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecimalNumberHander.m; sourceTree = "<group>"; };
 		8AD474931C71C841007D61FB /* DecimalNumberHanderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecimalNumberHanderTests.m; sourceTree = "<group>"; };
+		8AD474961C759C7D007D61FB /* NSDictionary+Unicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Unicode.h"; sourceTree = "<group>"; };
+		8AD474971C759C7D007D61FB /* NSDictionary+Unicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Unicode.m"; sourceTree = "<group>"; };
+		8AD4749A1C75AE57007D61FB /* LoadDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadDataHelper.h; sourceTree = "<group>"; };
+		8AD4749B1C75AE57007D61FB /* LoadDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadDataHelper.m; sourceTree = "<group>"; };
+		8AD4749D1C75AE6F007D61FB /* LoadDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadDataModel.h; sourceTree = "<group>"; };
+		8AD4749E1C75AE6F007D61FB /* LoadDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadDataModel.m; sourceTree = "<group>"; };
+		8AD474A01C75B337007D61FB /* LoadDataHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadDataHelperTests.m; sourceTree = "<group>"; };
 		8AE56EF91C57CC7200F07001 /* LineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineView.h; sourceTree = "<group>"; };
 		8AE56EFA1C57CC7200F07001 /* LineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineView.m; sourceTree = "<group>"; };
 		8AE56EFD1C58661200F07001 /* BezierPathVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierPathVC.h; sourceTree = "<group>"; };
@@ -147,6 +158,8 @@
 		8A8A12E41C561D53004E9DA3 /* sparrow */ = {
 			isa = PBXGroup;
 			children = (
+				8AD474991C75AE37007D61FB /* TestFile */,
+				8AD474951C759C08007D61FB /* Category */,
 				8AD4747C1C61E881007D61FB /* Framework */,
 				8AD4746B1C619377007D61FB /* Common */,
 				8AE56F091C58E57400F07001 /* Main */,
@@ -183,6 +196,7 @@
 				8A8A13011C561D53004E9DA3 /* Info.plist */,
 				8AD4748E1C71B152007D61FB /* DecimalNumberTests.m */,
 				8AD474931C71C841007D61FB /* DecimalNumberHanderTests.m */,
+				8AD474A01C75B337007D61FB /* LoadDataHelperTests.m */,
 			);
 			path = sparrowTests;
 			sourceTree = "<group>";
@@ -232,6 +246,26 @@
 			children = (
 			);
 			path = Framework;
+			sourceTree = "<group>";
+		};
+		8AD474951C759C08007D61FB /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				8AD474961C759C7D007D61FB /* NSDictionary+Unicode.h */,
+				8AD474971C759C7D007D61FB /* NSDictionary+Unicode.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		8AD474991C75AE37007D61FB /* TestFile */ = {
+			isa = PBXGroup;
+			children = (
+				8AD4749A1C75AE57007D61FB /* LoadDataHelper.h */,
+				8AD4749B1C75AE57007D61FB /* LoadDataHelper.m */,
+				8AD4749D1C75AE6F007D61FB /* LoadDataModel.h */,
+				8AD4749E1C75AE6F007D61FB /* LoadDataModel.m */,
+			);
+			path = TestFile;
 			sourceTree = "<group>";
 		};
 		8AE56EF81C57CC6300F07001 /* LineView */ = {
@@ -421,7 +455,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AD4746E1C6193AE007D61FB /* AsyncInvocation.m in Sources */,
+				8AD474981C759C7D007D61FB /* NSDictionary+Unicode.m in Sources */,
 				8AE56EFF1C58661200F07001 /* BezierPathVC.m in Sources */,
+				8AD4749F1C75AE6F007D61FB /* LoadDataModel.m in Sources */,
 				8AFAFF411C5775B70024E0EB /* RectView.m in Sources */,
 				8A8A12ED1C561D53004E9DA3 /* ViewController.m in Sources */,
 				8AD474891C61F874007D61FB /* LoadDataViewController.m in Sources */,
@@ -434,6 +470,7 @@
 				8A8A12E71C561D53004E9DA3 /* main.m in Sources */,
 				8AD474711C61A8E8007D61FB /* DownloadInvocation.m in Sources */,
 				8AE56F0C1C58E58800F07001 /* LoginViewController.m in Sources */,
+				8AD4749C1C75AE58007D61FB /* LoadDataHelper.m in Sources */,
 				8AE56F061C58B02700F07001 /* myLineChat.m in Sources */,
 				8AD4748D1C71A3AC007D61FB /* DecimalNumber.m in Sources */,
 			);
@@ -444,6 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AD4748F1C71B152007D61FB /* DecimalNumberTests.m in Sources */,
+				8AD474A11C75B337007D61FB /* LoadDataHelperTests.m in Sources */,
 				8AD474941C71C841007D61FB /* DecimalNumberHanderTests.m in Sources */,
 				8A8A13001C561D53004E9DA3 /* sparrowTests.m in Sources */,
 			);
