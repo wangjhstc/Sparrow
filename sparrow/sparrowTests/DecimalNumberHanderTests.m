@@ -48,7 +48,7 @@
 }
 
 - (void)testDecimalNumberByAdding {
-    NSDecimalNumber *result1 = [self.hander decimalNumberByAdding:@"0.8",@"0.12", nil];
+    NSDecimalNumber *result1 = [self.hander decimalNumberByAdding:@"0.8",@"0.12"];
     
     XCTAssert([[result1 stringValue] isEqualToString:@"0.92"]);
 //    XCTAssertEqual([result1 stringValue], @"0.92");

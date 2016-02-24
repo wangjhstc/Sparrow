@@ -146,19 +146,19 @@
 
 - (void)touchLogin:(UIButton *)sender {
     
-//    if([_txtUserName.text isEqualToString:@"wangjhstc"]) {
-//        [self animationGroup];
-//    }
-//    else {
-//        [self wiggleControl:_txtUserName];
-//        
-//        [_txtUserName setText:@""];
-//        [_txtUserName setValue:[UIColor yellowColor] forKeyPath:@"_placeholderLabel.textColor"];
-//        _btnLogin.enabled = NO;
-//    //    [_txtUserName setValue:[UIFont boldSystemFontOfSize:16] forKeyPath:@"_placeholderLabel.font"];//限定字号
-//    }
+    if([_txtUserName.text isEqualToString:@"wangjhstc"]) {
+        [self animationGroup];
+    }
+    else {
+        [self wiggleControl:_txtUserName];
+        
+        [_txtUserName setText:@""];
+        [_txtUserName setValue:[UIColor yellowColor] forKeyPath:@"_placeholderLabel.textColor"];
+        _btnLogin.enabled = NO;
+    //    [_txtUserName setValue:[UIFont boldSystemFontOfSize:16] forKeyPath:@"_placeholderLabel.font"];//限定字号
+    }
     
-    
+    return;
     
     __weak typeof(self) weakself = self;
     

@@ -26,6 +26,6 @@
  *
  *  @return return value description
  */
-- (NSDecimalNumber *)decimalNumberByAdding:(NSString *)value, ... NS_REQUIRES_NIL_TERMINATION;//NS_REQUIRES_NIL_TERMINATION;
+- (NSDecimalNumber *)decimalNumberByAdding:(NSString *)value, ...;// NS_REQUIRES_NIL_TERMINATION;//NS_REQUIRES_NIL_TERMINATION;
 
 @end
