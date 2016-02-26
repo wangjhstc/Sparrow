@@ -61,4 +61,45 @@
 //    NSLog(@"2222    :   %@",((LoadDataModel *)self.array[900000]).isChange ? @"YES" : @"NO");
 }
 
+
+- (void)testDispatch {
+    
+    dispatch_queue_t queue = dispatch_queue_create("com.sparrowkit.dispatch", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(queue, ^{
+        while (YES) {
+            NSLog(@"xxx");
+        }
+    });
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(15 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+#if !OS_OBJECT_USE_OBJC
+        dispatch_suspend(queue);
+        dispatch_release(queue);
+#else
+        dispatch_suspend(queue);
+#endif
+        
+    });
+    
+//    dispatch_release(queue);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @end

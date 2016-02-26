@@ -103,11 +103,14 @@
     [super didReceiveMemoryWarning];
 }
 
+const   static  NSInteger   wiggle = 4;
 
 - (void)wiggleControl:(UIView *)view {
+    
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
     animation.keyPath = @"position.x";
-    animation.values = @[@0,@4,@-4,@4,@-4,@4,@-4,@4,@0];
+//    animation.values = @[@0,@4,@-4,@4,@-4,@4,@-4,@4,@0];
+    animation.values   = @[@0,@(wiggle),@(-wiggle),@(wiggle),@(-wiggle),@(wiggle),@(-wiggle),@(wiggle),@0];
     animation.duration = 0.3;
     animation.additive = YES;
     [view.layer addAnimation:animation forKey:@"wiggle"];
