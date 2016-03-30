@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "LoadDataHelper.h"
+#import "DynamicViewController.h"
 
 
 @interface LoginModel : NSObject
@@ -145,6 +146,12 @@
 }
 
 - (void)touchLogin:(UIButton *)sender {
+    
+    DynamicViewController *dynamicVC = [[DynamicViewController alloc] init];
+    
+    [self presentViewController:dynamicVC animated:YES completion:nil];
+    
+    return;
     
     if([_txtUserName.text isEqualToString:@"wangjhstc"]) {
         [self animationGroup];

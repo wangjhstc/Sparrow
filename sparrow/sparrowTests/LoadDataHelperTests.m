@@ -64,15 +64,20 @@
 
 - (void)testDispatch {
     
+//    __weak __typeof(self)weakSelf = self;
+    
     dispatch_queue_t queue = dispatch_queue_create("com.sparrowkit.dispatch", DISPATCH_QUEUE_CONCURRENT);
     dispatch_async(queue, ^{
+        
+//        __strong __typeof(weakSelf) strongSelf = weakSelf;
+        
         while (YES) {
             NSLog(@"xxx");
         }
     });
     
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(15 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
 #if !OS_OBJECT_USE_OBJC
         dispatch_suspend(queue);
@@ -83,7 +88,17 @@
         
     });
     
-//    dispatch_release(queue);
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(15 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_resume(queue);
+    });
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(20 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_suspend(queue);
+    });
+    
+    
 }
 
 

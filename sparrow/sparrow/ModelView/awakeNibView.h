@@ -10,4 +10,6 @@
 
 @interface awakeNibView : UIView
 
+@property   (nonatomic,copy)    NSString        *viewTitle;
+
 @end
