@@ -75,10 +75,13 @@
     _userIco.layer.borderColor  = [UIColor yellowColor].CGColor;
     _userIco.layer.borderWidth  = 3.0f;
     
+    
     tapPress = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touchUserIco:)];
     tapPress.numberOfTapsRequired = 1;
     tapPress.numberOfTouchesRequired = 1;
     tapPress.delegate = self;
+    
+    
     
     [_userIco removeGestureRecognizer:tapPress];
     [_userIco addGestureRecognizer:tapPress];
@@ -147,11 +150,11 @@
 
 - (void)touchLogin:(UIButton *)sender {
     
-    DynamicViewController *dynamicVC = [[DynamicViewController alloc] init];
-    
-    [self presentViewController:dynamicVC animated:YES completion:nil];
-    
-    return;
+//    DynamicViewController *dynamicVC = [[DynamicViewController alloc] init];
+//    
+//    [self presentViewController:dynamicVC animated:YES completion:nil];
+//    
+//    return;
     
     if([_txtUserName.text isEqualToString:@"wangjhstc"]) {
         [self animationGroup];
@@ -274,6 +277,9 @@
     translateY.keyPath = @"position.y";
     translateY.toValue = @(64+25);
     
+//    CABasicAnimation *transePostionX = [CABasicAnimation animation];
+//    transePostionX.keyPath = @"";
+    
 //    CABasicAnimation *frame = [CABasicAnimation animation];
 //    frame.keyPath = @"frame";
 //    frame.toValue = [NSValue valueWithCGRect:CGRectMake(16, 64, 100, 100)];
@@ -284,7 +290,13 @@
     animationGroup.removedOnCompletion = NO;
     animationGroup.fillMode = kCAFillModeForwards;
     
+    _userIco.backgroundColor = [UIColor redColor];
     [_userIco.layer addAnimation:animationGroup forKey:nil];
+    
+    
+    [_userIco removeGestureRecognizer:tapPress];
+//    [_userIco addGestureRecognizer:tapPress];
+    
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
